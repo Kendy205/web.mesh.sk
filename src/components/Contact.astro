@@ -40,15 +40,21 @@
       Líbí se vám co děláme? Chtěli by jste vytvořit stránku? Tak neváhejte a kontaktujte nás zde nebo nám napište e-mail na <a href="mailto:strankylouny@gmail.com" class="text-zinc-800 hover:underline">strankylouny@gmail.com</a>
     </p>
 
-    <form name="contact" class="w-full" netlify>
-      <div class="my-2">
-        <label for="email">E-mail na který vás můžeme kontaktovat zpátky:</label>
+    <form name="contact" class="w-full" action="/succes" netlify-honeypot="field" data-netlify-recaptcha="true" data-netlify="true">
+      <div class="hidden">
+         <label>
+          Nevyplňujte pokud jste člověk <input name="bot-field" />
+        </label>
+      </div>
+      <div class="my-4">
+        <label for="email" class="font-semibold">E-mail na který vás můžeme kontaktovat zpátky:</label>
         <input type="email" name="email" id="email" class="p-2 w-full rounded-lg shadow-sm" placeholder="jmeno@priklad.cz">
       </div>
-      <div class="my-2">
-        <label for="message">Vaše zpráva:</label>
+      <div class="my-4">
+        <label for="message" class="font-semibold">Vaše zpráva:</label>
         <textarea name="message" id="message" rows={10} class="w-full rounded-lg shadow-sm p-2"></textarea>
       </div>
+      <div data-netlify-recaptcha="true"></div>
       <div class="my-2">
         <button class="bg-black text-white shadow-sm p-2 hover:bg-zinc-900 duration-300">Odeslat zprávu</button>
       </div>

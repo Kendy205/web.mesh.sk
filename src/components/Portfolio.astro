@@ -7,43 +7,49 @@ const {portfolio} = Astro.props as Language
 ---
 
 <section class="mb-32" id="portfolio" data-aos="fade-up">
-  <div class="ml-4">
-    <SectionHeading>Portfolio</SectionHeading>
+  <SectionHeading>Portfolio</SectionHeading>
+  <div class="lg:flex w-full mb-4">
+    <div class="mr-2 w-full">
+      <PortfolioCard
+        alt="Good Fellas"
+        description="SEO kompatibilní, stránka pro vyhlášený Lounský Barber Shop"
+        heading="Goodfellas Barbershop"
+        link="https://barbershoplouny.cz/"
+        image="/assets/barbershop.jpg"
+        shortlink="barbershoplouny.cz"
+      />
+    </div>
+    <div class="ml-2 w-full">
+      <PortfolioCard
+        alt="Osobní stránka - Tomáš Kebrle"
+        description="SEO kompatibilní, osobní stránka s blogem a kontaktními informacemi"
+        heading="Osobní stránka - Tomáš Kebrle"
+        link="https://tomaskebrle.cz/"
+        image= "/assets/tomas_kebrle.png"
+        shortlink="tomaskebrle.cz"
+      />
+    </div>
   </div>
-  <div class="lg:flex gap-4">
-    <PortfolioCard 
-      alt="Good Fellas"
-      description="SEO kompatibilní, stránka pro vyhlášený Lounský Barber Shop"
-      heading="Goodfellas Barbershop"
-      link="https://barbershoplouny.cz/"
-      image="/assets/barbershop.jpg"
-      shortlink="barbershoplouny.cz"
-    />
-    <PortfolioCard 
-      alt="Osobní stránka - Tomáš Kebrle"
-      description="SEO kompatibilní, osobní stránka s blogem a kontaktními informacemi"
-      heading="Osobní stránka - Tomáš Kebrle"
-      link="https://tomaskebrle.cz/"
-      image= "/assets/tomas_kebrle.png"
-      shortlink="tomaskebrle.cz"
-    />
-  </div>
-  <div class="lg:flex gap-4">
-    <PortfolioCard 
-      alt="Maturita Book"
-      description="Web aplikace, s listem všech knížek potřebných na maturitu. Web disponuje funkcemi jako jsou komentáře hodnocení knížek."
-      heading="Maturita Book"
-      link="https://maturita-book.vercel.app"
-      image="/assets/maturita_book.jpg"
-      shortlink="maturita-book.vercel.app"
-    />
-    <PortfolioCard 
-      alt="Astro Open Graph Image"
-      description="Nástroj na automatické generování Open Graph obrázků, který využilo už přes 200 lidí."
-      heading="Astro Open Graph Image"
-      link="https://www.npmjs.com/package/astro-og-image"
-      image= "/assets/astro-og-image.jpg"
-      shortlink="npmjs.com/package/astro-og-image"
-    />
+  <div class="lg:flex">
+    <div class="mr-2 w-full">
+      <PortfolioCard
+        alt="Maturita Book"
+        description="Web aplikace, s listem všech knížek potřebných na maturitu. Web disponuje funkcemi jako jsou komentáře hodnocení knížek."
+        heading="Maturita Book"
+        link="https://maturita-book.vercel.app"
+        image="/assets/maturita_book.jpg"
+        shortlink="maturita-book.vercel.app"
+      />
+    </div>
+    <div class="ml-2 w-full">
+      <PortfolioCard
+        alt="Astro Open Graph Image"
+        description="Nástroj na automatické generování Open Graph obrázků, který využilo už přes 200 lidí."
+        heading="Astro Open Graph Image"
+        link="https://www.npmjs.com/package/astro-og-image"
+        image= "/assets/astro-og-image.jpg"
+        shortlink="npmjs.com/package/astro-og-image"
+      />
+    </div>
   </div>
 </section>

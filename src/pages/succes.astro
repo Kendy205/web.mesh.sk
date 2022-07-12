@@ -25,17 +25,19 @@ let permalink = 'https://web.mesh.sk';
         background-image: linear-gradient(0deg, rgba(228 228 231) 35%, rgba(228, 228, 231, 0.75) 100%), url("/assets/bg.jpg");
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
       }
     </style>
     <main class="w-full px-4 lg:px-[16.666667%] min-h-screen">
-      <Navbar/>
-      <Header/>
-      <About />
-      <Portfolio/>
-      <Contact></Contact>
+      <div class="grid place-items-center min-h-screen">
+        <span>
+          <h1 class="text-8xl mb-2">Děkujeme za důvěru!</h1>
+          <p class="text-zinc-600 mb-4">
+            Pokusíme se odpovědět co nejdříve.
+          </p>
+          <a href="/" class="text-zinc-800 hover:underline">Zpátky na stránku</a>
+        </span>
+      </div>      
     </main>
-    <Footer></Footer>
     <!-- <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script is:inline>
       AOS.init({
