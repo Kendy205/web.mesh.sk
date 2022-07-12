@@ -22,7 +22,7 @@ let permalink = 'https://web.mesh.sk';
 	<body>
   <style>
       main{
-        background-image: linear-gradient(0deg, rgba(228 228 231) 35%, rgba(228, 228, 231, 0.85) 100%), url("/assets/bg.jpg");
+        background-image: linear-gradient(0deg, rgba(228 228 231) 35%, rgba(228, 228, 231, 0.75) 100%), url("/assets/bg.jpg");
         background-position: center;
         background-size: cover;
       }
@@ -30,16 +30,16 @@ let permalink = 'https://web.mesh.sk';
     <main class="w-full px-4 lg:px-[16.666667%]">
       <Navbar/>
       <Header/>
-      <!-- <About text={language.about.text} title={language.about.title}/> -->
+      <About />
       <Portfolio/>
       <Contact></Contact>
     </main>
     <Footer></Footer>
-    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script is:inline>
       AOS.init({
         duration: 500,
       });
-    </script>
+    </script> -->
 	</body>
 </html>

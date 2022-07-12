@@ -11,7 +11,7 @@
   </a>
   <span class="hidden lg:flex gap-4">
     <div class:active={active == "about"}>
-      <a href="/#about">O náš</a>
+      <a href="/#about">O nás</a>
     </div>
 
     <div class:active={active == "portfolio"}>
