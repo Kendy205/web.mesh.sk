@@ -1,6 +1,21 @@
+---
+interface Props {
+    image?: string
+    alt?: string,
+    heading?:string,
+    description?: string,
+    link?: string,
+    shortlink?: string,
+    color?: string
+  }
 
-<section class="section">
-    <h1>lol</h1>
+
+  const { image,alt, heading, description, link, shortlink, color } :Props = Astro.props
+
+
+---
+<section class="section" style={"background-color:"+color}>
+    <slot/>
 </section>
 
 <style>
@@ -8,7 +23,8 @@
         position: relative;
         width: 100%;
         height:100%;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
+       
     }
 
 </style>
