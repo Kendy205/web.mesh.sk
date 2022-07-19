@@ -24,66 +24,17 @@ let permalink = 'https://web.mesh.sk';
   </head>
 
 	<body>
-		 <script>
-			import * from "fullpage.js"
-			new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-  navigation: true,
-  onLeave: (origin, destination, direction) => {
-    const section = destination.item;
-    const title = section.querySelector("h1");
-    const tl = new TimelineMax({ delay: 0.5 });
-    tl.fromTo(title, 0.5, { y: "50", opacity: 0 }, { y: "0", opacity: 1 });
-    if (destination.index === 1) {
-      const chairs = document.querySelectorAll(".chair");
-      const description = document.querySelector(".description");
-      tl.fromTo(chairs, 0.7, { x: "100%" }, { x: "-10%" })
-        .fromTo(
-          description,
-          0.5,
-          { opacity: 0, y: "50" },
-          { y: "0", opacity: 1 }
-        )
-        .fromTo(chairs[0], 1, { opacity: 1 }, { opacity: 1 })
-        .fromTo(chairs[1], 1, { opacity: 0 }, { opacity: 1 })
-        .fromTo(chairs[2], 1, { opacity: 0 }, { opacity: 1 });
-    }
-  }
-});
-			/* const numberOfPages = 4
-			let prevScroll=document.body.scrollTop
+		<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"
+      integrity="sha512-+m1+m9XBnZXowk9jSNIlZYgtOPTIu6aUHha/4/3dk84PQcpWgrNd4/zKmOYno0BQK9nuJ6WgYBnuPqCrmvMNtg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+		
 
-			function resize(){
-				var h=window.screen.availHeight
-				var w=window.screen.availWidth
-				var pins = []
-				for (let x = 1;x<numberOfPages;x++){
-					pins.push(x*h)
-				}
-			}
-			resize()
-console.log("fg")
+		 
 
-			window.addEventListener("scroll",function() {myFunction()});
-
-			function myFunction() {
-				console.log(document.body.scrollTop)
-				if (document.body.scrollTop > prevScroll) {
-					let close = 1000000
-					let active = 15
-					pins.map((p, i)=>{
-						if(document.body.scrollTop-p<close){
-							close = document.body.scrollTop-p;
-							active = i;
-						}
-					})
-					window.scrollBy(0,pins[active+1]-document.body.scrollTop);
-				}
-			} */
-		</script> 
-
-			<!-- <div class="cont" id="cont">
+			 <div class="cont" id="fullpage">
 				<section class="section s1">
 					<Slide id="1" color="#ED213A" color2="#93291E">
 						<div class="page-content">
@@ -107,8 +58,8 @@ console.log("fg")
 					<h2>Webmesh</h2>
 				</div>
 			</Slide></section>
-			 -->
-			 <div id="fullpage">
+			 </div>
+			<!--  <div id="fullpage">
 				<section class="section s1">
 				  <h1>Home Decoration</h1>
 				</section>
@@ -135,9 +86,47 @@ console.log("fg")
 				<section class="section s4">
 				  <h1>Page4</h1>
 				</section>
-			  </div>
+			  </div> -->
+			  <script>
+				new fullpage("#fullpage", {
+	  //options here
+	  autoScrolling: true,
+	  navigation: true,
+	  
+	});
+				/* const numberOfPages = 4
+				let prevScroll=document.body.scrollTop
+	
+				function resize(){
+					var h=window.screen.availHeight
+					var w=window.screen.availWidth
+					var pins = []
+					for (let x = 1;x<numberOfPages;x++){
+						pins.push(x*h)
+					}
+				}
+				resize()
+	console.log("fg")
+	
+				window.addEventListener("scroll",function() {myFunction()});
+	
+				function myFunction() {
+					console.log(document.body.scrollTop)
+					if (document.body.scrollTop > prevScroll) {
+						let close = 1000000
+						let active = 15
+						pins.map((p, i)=>{
+							if(document.body.scrollTop-p<close){
+								close = document.body.scrollTop-p;
+								active = i;
+							}
+						})
+						window.scrollBy(0,pins[active+1]-document.body.scrollTop);
+					}
+				} */
+			</script> 
 			
-		<style>
+		<!-- <style>
 			* {
   margin: 0;
   padding: 0;
@@ -188,7 +177,7 @@ body {
 }
 
 		</style>
-		
+		 -->
 		
   
 	</body>
