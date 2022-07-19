@@ -1,35 +1,21 @@
 <style>
-  span {
-    position: absolute;
+  i {
+    position:absolute;
     animation: scroll;
     animation-duration: 2s;
     animation-iteration-count: infinite;
   }
 
-  @keyframes scroll {
-    from {
-      padding-top: 0;
-      opactity: 75%
-    }
-
-    to {
-      padding-top: 25px;
-      opacity: 0%;
-    }
-  }
-
-  h1 {
-    font-family: 'Poiret One', cursive;
+  @keyframes scroll{
+    from {padding-top: 0; opactity: 75%}
+    to {padding-top: 25px; opacity: 0%;}
   }
 </style>
 
-<div class="section">
+<div class="section !flex">
   <header class="grid place-items-center">
-    <h1 class="text-8xl text-white bg-gray-0 rounded-md mb-4">web.mesh</h1>
+    <h1 class="text-8xl text-white bg-gray-0 rounded-md mb-4 font-display">web.mesh</h1>
     <p class="text-zinc-200 mb-4">Webdesignová a grafická agentura z Loun</p>
-    <div class="relative"><span class="material-symbols-outlined text-white">
-        keyboard_double_arrow_down
-      </span>
-    </div>
+    <div class="relative"><i class="fa-solid fa-angles-down text-white fa-xl"></i></div>
   </header>
 </div>
