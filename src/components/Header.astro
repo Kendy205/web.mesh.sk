@@ -1,16 +1,35 @@
----
-  import {Language} from "../types"
+<style>
+  span {
+    position: absolute;
+    animation: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
 
-  const {tagline} = Astro.props as Language["header"]
----
+  @keyframes scroll {
+    from {
+      padding-top: 0;
+      opactity: 75%
+    }
 
-<header class="flex items-left justify-center h-max my-72" data-aos="fade-up">
-  <div class="w-full">
-    <span class="text-8xl text-black font-serif font-bold flex justify-left text-left">
-      Web Mesh
-    </span>
-    <span class="text-zinc-600 flex mt-8 justify-left">
-      Grafická & webová agentura z Loun
-    </span>
-  </div>
-</header>
+    to {
+      padding-top: 25px;
+      opacity: 0%;
+    }
+  }
+
+  h1 {
+    font-family: 'Poiret One', cursive;
+  }
+</style>
+
+<div class="section">
+  <header class="grid place-items-center">
+    <h1 class="text-8xl text-white bg-gray-0 rounded-md mb-4">web.mesh</h1>
+    <p class="text-zinc-200 mb-4">Webdesignová a grafická agentura z Loun</p>
+    <div class="relative"><span class="material-symbols-outlined text-white">
+        keyboard_double_arrow_down
+      </span>
+    </div>
+  </header>
+</div>

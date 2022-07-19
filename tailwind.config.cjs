@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         mono: ["JetBrains Mono", "monospace"],
         poppins: ["Poppins", "sans-serif"],
+        display: ["Poiret One", "cursive"],
       },
       colors: {
         "darker-blue": "#010C13",
