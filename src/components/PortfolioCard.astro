@@ -15,15 +15,46 @@
 ---
 
 <a href={link}>
-  <div class="bg-white hover:ring-4 ring-0 ring-black p-4 w-full h-full duration-150 mb-4 ring-inset">
+  <div class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
+  backdrop-blur-md bg-opacity-10 text-white
+  shadow-lg hover:shadow-xl duration-300 p-4 flex flex-col">
     <!-- <img src={image} alt={alt} class=""> -->
-    <h3 class="text-black font-serif text-4xl my-4">{heading}</h3>
-    <p class="text-zinc-600 text-lg mb-12">
+    <h3 class="text-4xl flex justify-center font-display mb-6">{heading}</h3>
+    <p class="text-gray-300 text-lg mb-12">
       {description}
     </p>
-  
-    <Button link={link}>
-      {shortlink}
-    </Button>
+    <a class="relative cursor-pointer linkmore mt-auto" href={link}>
+      <div class="text-white duration-300 flex justify-center gap-4">
+        <div class="iconka">
+
+          <span class="material-symbols-outlined">
+            open_in_new
+          </span>
+        </div>
+        
+        <div class="shortlink hover:underline pb-1">{shortlink}</div>
+      </div>
+    </a>
   </div>
 </a>
+
+<style>
+
+  .shortlink{
+    color: #a2a2a2;
+    transition:250ms
+  }
+  .linkmore:hover .shortlink{
+    color:#ffffff;
+    text-decoration: none;
+  }
+  .iconka{
+    transform:translateX(-40%);
+    opacity:0;
+    transition:300ms
+  }
+  .linkmore:hover .iconka{
+    transform:translateX(0);
+    opacity: 1;
+  }
+</style>
