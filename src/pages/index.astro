@@ -1,46 +1,66 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from "../components/Header.astro"
-import Navbar from "../components/Navbar.svelte"
 import About from "../components/About.astro"
 import Portfolio from "../components/Portfolio.astro"
 import Contact from "../components/Contact.astro"
-import Footer from "../components/Footer.astro"
 let title = 'Web Mesh';
 let description = 'Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.';
 let permalink = 'https://web.mesh.sk';
-
-
 ---
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead {title} {description} {permalink} />
+  <head>
+    <BaseHead {title} {description} {permalink} />
     <script src="https://kit.fontawesome.com/0611ddbb9f.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js" integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css" integrity="sha512-zDKgq9gDZL1N3buxzFPZjHwqDOFsgTyhR0aJtXLFTIjEFovumXMaVeF6iBUZ/Rc4Mb0IqRrhqAY+RY7OCUBo6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-
-	<body>
-  <style>
+  <body>
+    <style is:inline>
       main{
-        background-image: linear-gradient(0deg, rgba(228 228 231) 35%, rgba(228, 228, 231, 0.75) 100%), url("/assets/bg.jpg");
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
+        background-image: linear-gradient(45deg, #031927 10%,  rgba(3, 25, 39, 0.85) 100%),url("/assets/bg.jpg");
+      }
+
+      /*Changes the color of the navigation dots on the side*/
+      #fp-nav ul li a span, .fp-slidesNav ul li a span{
+        background : #acacac
       }
     </style>
-    <main class="w-full px-4 lg:px-[16.666667%] min-h-screen">
-      <Navbar/>
-      <Header/>
-      <About />
-      <Portfolio/>
-      <Contact></Contact>
+    <main id="body">
+      <div id="fullpage">
+        <Header/>
+        <About/>
+        <Portfolio/>
+        <Contact/>
+      </div>
     </main>
-    <Footer></Footer>
-    <!-- <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script is:inline>
-      AOS.init({
-        duration: 500,
+    
+    <script>
+      import {gsap} from "gsap"
+      import fullpage from "fullpage.js"
+      new fullpage('#fullpage', {
+        autoScrolling: true,
+        css3: true,
+        credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
+        navigation: true,
+        navigationTooltips: ["Úvod", "Co nabízíme", "Portfolio", "Technologie", "Náš tým", "Kontakt"],
+        showActiveTooltip: true,
+        beforeLeave: (origin, destination, direction, trigger) => {
+          console.log(destination)
+          const body = document.getElementById("body")
+          if(destination.index === 0){
+            gsap.fromTo("#body", 
+              {backgroundImage: "linear-gradient(45deg, rgba(3, 25, 39, 0.85) 10%,  rgba(3, 25, 39, 0.5) 100%), url(\"/assets/bg.jpg\")"},
+              {backgroundImage: "linear-gradient(45deg, #031927 10%,  rgba(3, 25, 39, 0.85) 100%),url(\"/assets/bg.jpg\")", duration: 0.7});
+          } else if (origin.index === 0) {
+            gsap.fromTo("#body", 
+              {backgroundImage: "linear-gradient(45deg, #031927 10%,  rgba(3, 25, 39, 0.85) 100%),url(\"/assets/bg.jpg\")"},
+              {backgroundImage: "linear-gradient(45deg, rgba(3, 25, 39, 0.7) 10%,  rgba(3, 25, 39, 0.4) 100%), url(\"/assets/bg.jpg\")", duration: 0.7});
+          }
+        }
       });
-    </script> -->
-	</body>
+    </script>
+  </body>
 </html>
