@@ -35,29 +35,29 @@ let permalink = 'https://web.mesh.sk';
 		 
 
 			 <div class="cont" id="fullpage">
-				<section class="section s1">
+				<div class="section s1">
 					<Slide id="1" color="#ED213A" color2="#93291E">
 						<div class="page-content">
 							<h1>Hello!</h1>
 						</div>
 						
 					</Slide>
-				</section>
-				<section class="section s2"><Slide id="2" color="#8E2DE2" color2="#4A00E0">
+				</div>
+				<div class="section s2"><Slide id="2" color="#8E2DE2" color2="#4A00E0">
 					<div class="page-content">
 						<h2>We</h2>
 					</div>
-				</Slide></section>
-				<section class="section s3"><Slide id="3" color="#1f4037" color2="#99f2c8">
+				</Slide></div>
+				<div class="section s3"><Slide id="3" color="#1f4037" color2="#99f2c8">
 				<div class="page-content">
 					<h2>Are</h2>
 				</div>
-			</Slide></section>
-				<section class="section s4"><Slide id="4" color="#f12711" color2="#f5af19">
+			</Slide></div>
+				<div class="section s4"><Slide id="4" color="#f12711" color2="#f5af19">
 				<div class="page-content">
 					<h2>Webmesh</h2>
 				</div>
-			</Slide></section>
+			</Slide></div>
 			 </div>
 			<!--  <div id="fullpage">
 				<section class="section s1">
@@ -91,8 +91,15 @@ let permalink = 'https://web.mesh.sk';
 				new fullpage("#fullpage", {
 	  //options here
 	  autoScrolling: true,
-	  navigation: true,
-	  
+	  menu: '#menu',
+	lockAnchors: false,
+	anchors:['firstPage', 'secondPage',"k","l"],
+	navigation: true,
+	navigationPosition: 'right',
+	navigationTooltips:["Domů","O nás", "Portfolio","Certifikáty"],
+	showActiveTooltip: true,
+	credits: { enabled:false, label: 'Made with fullPage.js', position: 'right'},
+	  lazyLoading: true,
 	});
 				/* const numberOfPages = 4
 				let prevScroll=document.body.scrollTop
@@ -181,7 +188,7 @@ body {
 		
   
 	</body>
-	<!-- <style>
+	<style>
 		h1{
 			font-family:"JetBrains Mono";
 			font-size: 6rem;
@@ -194,16 +201,7 @@ body {
 			font-weight: 900;
 			color:white;
 		}
-		.cont{
-			position: relative;
-			overflow:auto;	
-			width: 100vw;
-	/* 		scroll-snap-type: y mandatory;
-			overflow-y: scroll;
-			scroll-padding:50px;
-			scroll-behavior: smooth; */
-		}
 		
 	
-	</style> -->
+	</style>
 </html>
