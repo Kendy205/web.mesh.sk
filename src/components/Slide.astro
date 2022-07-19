@@ -6,15 +6,16 @@ interface Props {
     description?: string,
     link?: string,
     shortlink?: string,
-    color?: string
+    color?: string,
+    color2?: string
   }
 
 
-  const { image,alt, heading, description, link, shortlink, color } :Props = Astro.props
+  const { image,alt, heading, description, link, shortlink, color,color2 } :Props = Astro.props
 
 
 ---
-<section class="section" style={"background-color:"+color}>
+<section class="section" style={color2?"background-image:linear-gradient(135deg,"+color+","+color2+");":"background-color:"+color}>
     <slot/>
 </section>
 
@@ -24,7 +25,9 @@ interface Props {
         width: 100%;
         height:100%;
         scroll-snap-align: center;
-       
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
 
 </style>
