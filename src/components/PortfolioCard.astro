@@ -19,12 +19,12 @@ const { image,alt, heading, description, link, shortlink, main } :Props = Astro.
 backdrop-blur-md bg-opacity-10 text-white
 shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-2">
   <div class="flex justify-start gap-8">
-    <span>
+    <span class="grid grid-flow-row">
       <h3 class="text-4xl font-display mb-6">{heading}</h3>
       <p class="text-gray-300 text-lg mb-12">
         {description}
       </p>
-      <a class="cursor-pointer linkmore mt-auto" href={link}>
+      <a class="cursor-pointer self-end" href={link}>
         <div class="text-white duration-300 gap-4 flex justify-start">
           <div class="iconka">
             <span class="material-symbols-outlined">
