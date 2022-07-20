@@ -41,7 +41,8 @@ let permalink = 'https://web.mesh.sk';
     </main>
     
     <script is:inline>
-      new fullpage('#fullpage', {
+      if(window !== undefined){
+        new fullpage('#fullpage', {
         autoScrolling: true,
         css3: true,
         credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
@@ -62,6 +63,7 @@ let permalink = 'https://web.mesh.sk';
           }
         }
       });
+      }
     </script>
   </body>
 </html>
