@@ -6,34 +6,24 @@ import {Language} from "../types"
 const {portfolio} = Astro.props as Language
 ---
 
-<section class="section p-64"  id="portfolio" data-aos="fade-up">
+<section class="section lg:p-32 p-4"  id="portfolio" data-aos="fade-up">
   <SectionHeading>Portfolio</SectionHeading>
-  <div class="grid lg:grid-cols-2 grid-cols-2 gap-8"><div class="">
-
+  <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
+  <div class="col-span-2">
     <PortfolioCard
       alt="Good Fellas"
-      description="SEO kompatibilní, stránka pro vyhlášený Lounský Barber Shop"
+      description="Jednostránkový web pro vyhlášený Lounský barbershop, který se díky naší SEO optimalizaci dostal na první příčku vyhledávání Google."
       heading="Goodfellas Barbershop"
       link="https://barbershoplouny.cz/"
       image="/assets/barbershop.jpg"
       shortlink="barbershoplouny.cz"
+      main={true}
     />
   </div>
-  <div class="">
-    <PortfolioCard
-      alt="Osobní stránka - Tomáš Kebrle"
-      description="SEO kompatibilní, osobní stránka s blogem a kontaktními informacemi"
-      heading="Osobní stránka - Tomáš Kebrle"
-      link="https://tomaskebrle.cz/"
-      image= "/assets/tomas_kebrle.png"
-      shortlink="tomaskebrle.cz"
-    />
-  </div>
-
   <div class="">
     <PortfolioCard
       alt="Maturita Book"
-      description="Web aplikace, s listem všech knížek potřebných na maturitu. Web disponuje funkcemi jako jsou komentáře hodnocení knížek."
+      description="Webová aplikace, pro Lounské gymnázium. Na webu je seznam všech knížek pro maturitní četbu, a ke každé knížce je možné přidat komentář, nebo ji přidat do oblíbených."
       heading="Maturita Book"
       link="https://maturita-book.vercel.app"
       image="/assets/maturita_book.jpg"
@@ -43,13 +33,27 @@ const {portfolio} = Astro.props as Language
   <div class="">
     <PortfolioCard
       alt="Astro Open Graph Image"
-      description="Nástroj na automatické generování Open Graph obrázků, který využilo už přes 200 lidí."
+      description="Nástroj pro automatické generování Open Graph obrázků, které pomáhají SEO optimalizaci. Nástroj už využilo přes 300 lidí."
       heading="Astro Open Graph Image"
       link="https://www.npmjs.com/package/astro-og-image"
       image= "/assets/astro-og-image.jpg"
       shortlink="npmjs.com/package/astro-og-image"
     />
-  </div></div>
+  </div>
+<!--   <div class="">
+    <PortfolioCard
+      alt="Osobní stránka - Tomáš Kebrle"
+      description="Osobní stránka a blog dohromady. "
+      heading="Osobní stránka - Tomáš Kebrle"
+      link="https://tomaskebrle.cz/"
+      image= "/assets/tomas_kebrle.png"
+      shortlink="tomaskebrle.cz"
+    />
+  </div> -->
+
+
+  
+  </div>
   
 
 </section>

@@ -1,60 +1,42 @@
 ---
-  import Button from "./Button.astro"
-  
-  interface Props {
-    image?: string
-    alt?: string,
-    heading?:string,
-    description?: string,
-    link?: string,
-    shortlink?: string
-  }
+import Button from "./Button.astro"
+
+interface Props {
+image?: string
+alt?: string,
+heading?:string,
+description?: string,
+link?: string,
+shortlink?: string,
+main?: boolean,
+}
 
 
-  const { image,alt, heading, description, link, shortlink } :Props = Astro.props
+const { image,alt, heading, description, link, shortlink, main } :Props = Astro.props
 ---
 
-<a href={link}>
-  <div class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
-  backdrop-blur-md bg-opacity-10 text-white
-  shadow-lg hover:shadow-xl duration-300 p-4 flex flex-col">
-    <!-- <img src={image} alt={alt} class=""> -->
-    <h3 class="text-4xl flex justify-center font-display mb-6">{heading}</h3>
-    <p class="text-gray-300 text-lg mb-12">
-      {description}
-    </p>
-    <a class="relative cursor-pointer linkmore mt-auto" href={link}>
-      <div class="text-white duration-300 flex justify-center gap-4">
-        <div class="iconka">
-
-          <span class="material-symbols-outlined">
-            open_in_new
-          </span>
+<div class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
+backdrop-blur-md bg-opacity-10 text-white
+shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-2">
+  <div class="flex justify-start gap-8">
+    <span>
+      <h3 class="text-4xl font-display mb-6">{heading}</h3>
+      <p class="text-gray-300 text-lg mb-12">
+        {description}
+      </p>
+      <a class="cursor-pointer linkmore mt-auto" href={link}>
+        <div class="text-white duration-300 gap-4 flex justify-start">
+          <div class="iconka">
+            <span class="material-symbols-outlined">
+              open_in_new
+            </span>
+          </div>
+          <div class="shortlink hover:underline pb-1">{shortlink}</div>
         </div>
-        
-        <div class="shortlink hover:underline pb-1">{shortlink}</div>
-      </div>
-    </a>
+      </a>
+    </span>
+    <span>
+      {main ? <img src={image} alt="" class="rounded-lg">: ""}
+    </span>
   </div>
-</a>
-
-<style>
-
-  .shortlink{
-    color: #a2a2a2;
-    transition:250ms
-  }
-  .linkmore:hover .shortlink{
-    color:#ffffff;
-    text-decoration: none;
-  }
-  .iconka{
-    transform:translateX(-40%);
-    opacity:0;
-    transition:300ms
-  }
-  .linkmore:hover .iconka{
-    transform:translateX(0);
-    opacity: 1;
-  }
-</style>
+</div>
