@@ -1,23 +1,25 @@
 ---
-import Button from "./Button.astro"
+import Button from "./Button.astro";
 
 interface Props {
-image?: string
-alt?: string,
-heading?:string,
-description?: string,
-link?: string,
-shortlink?: string,
-main?: boolean,
+  image?: string;
+  alt?: string;
+  heading?: string;
+  description?: string;
+  link?: string;
+  shortlink?: string;
+  main?: boolean;
 }
 
-
-const { image,alt, heading, description, link, shortlink, main } :Props = Astro.props
+const { image, alt, heading, description, link, shortlink, main }: Props =
+  Astro.props;
 ---
 
-<section class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
+<section
+  class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
-shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-1 relative sekce">
+shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-1 relative sekce"
+>
   <div class="flex justify-start gap-8">
     <span class="grid grid-flow-row">
       <h3 class="text-4xl font-display mb-6">{heading}</h3>
@@ -27,16 +29,14 @@ shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-1 re
       <a class="cursor-pointer self-end" href={link}>
         <div class="text-white duration-300 gap-4 flex justify-start">
           <div class="iconka">
-            <span class="material-symbols-outlined">
-              open_in_new
-            </span>
+            <span class="material-symbols-outlined"> open_in_new</span>
           </div>
           <div class="shortlink hover:underline pb-1">{shortlink}</div>
         </div>
       </a>
     </span>
     <span>
-      {main ? <img src={image} alt="" class="rounded-lg" />: <div></div>}
+      {main ? <img src={image} alt="" class="rounded-lg" /> : <div />}
     </span>
   </div>
 </section>

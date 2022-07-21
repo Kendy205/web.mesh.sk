@@ -1,28 +1,37 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from "../components/Header.astro"
-import Navbar from "../components/Navbar.svelte"
-import About from "../components/About.astro"
-import Portfolio from "../components/Portfolio.astro"
-import Contact from "../components/Contact.astro"
-import Footer from "../components/Footer.astro"
-let title = 'Web Mesh - ';
-let description = 'Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.';
-let permalink = 'https://web.mesh.sk';
-
-
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.svelte";
+import About from "../components/About.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+let title = "Web Mesh - ";
+let description =
+  "Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.";
+let permalink = "https://web.mesh.sk";
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead {title} {description} {permalink} />
-    <script src="https://kit.fontawesome.com/0611ddbb9f.js" crossorigin="anonymous"></script>
+  <head>
+    <BaseHead {title} {description} {permalink} />
+    <script
+      src="https://kit.fontawesome.com/0611ddbb9f.js"
+      crossorigin="anonymous"
+    >
+
+    </script>
   </head>
 
-	<body>
-  <style>
-      main{
-        background-image: linear-gradient(0deg, rgba(228 228 231) 35%, rgba(228, 228, 231, 0.75) 100%), url("/assets/bg.jpg");
+  <body>
+    <style>
+      main {
+        background-image: linear-gradient(
+            0deg,
+            rgba(228 228 231) 35%,
+            rgba(228, 228, 231, 0.75) 100%
+          ),
+          url("/assets/bg.jpg");
         background-position: center;
         background-size: cover;
       }
@@ -31,12 +40,12 @@ let permalink = 'https://web.mesh.sk';
       <div class="grid place-items-center min-h-screen">
         <span>
           <h1 class="text-8xl mb-2">Děkujeme za důvěru!</h1>
-          <p class="text-zinc-600 mb-4">
-            Pokusíme se odpovědět co nejdříve.
-          </p>
-          <a href="/" class="text-zinc-800 hover:underline">Zpátky na stránku</a>
+          <p class="text-zinc-600 mb-4">Pokusíme se odpovědět co nejdříve.</p>
+          <a href="/" class="text-zinc-800 hover:underline"
+            >Zpátky na stránku
+          </a>
         </span>
-      </div>      
+      </div>
     </main>
     <!-- <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script is:inline>
@@ -44,5 +53,5 @@ let permalink = 'https://web.mesh.sk';
         duration: 500,
       });
     </script> -->
-	</body>
+  </body>
 </html>

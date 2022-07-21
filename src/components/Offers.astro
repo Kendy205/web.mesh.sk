@@ -1,24 +1,64 @@
 ---
-  import SectionHeading from "./SectionHeading.astro";
-  import Item from "./Item.astro";
+import SectionHeading from "./SectionHeading.astro";
+import Item from "./Item.astro";
 ---
 
 <style>
   a {
-    @apply hover:underline text-zinc-300
+    @apply hover:underline text-zinc-300;
   }
 </style>
 
-<section class="section lg:p-32 p-4" id="about" data-aos="fade-up" data-aos-delay="200">
-  <SectionHeading  data-aos-delay="200">Co nabízíme</SectionHeading>
+<section
+  class="section lg:p-32 p-4"
+  id="about"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  <SectionHeading data-aos-delay="200">Co nabízíme</SectionHeading>
   <div class="grid lg:grid-cols-4 grid-cols-2 lg:gap-8 gap-4">
-    <Item title="Webové stránky" icon="language">Webové stranky jsou naše specialita. Tvorbě webových stránek se věnujeme už řadu let. A za tu dobu jsme se toho dost naučili. K tvorbě vždy využíváme nejmodernější technologie.</Item>
-    <Item title="E-shopy" icon="storefront">E-shopy jsou nejlepší způsob jak rozšířit vaší firmu. E-shopy děláme zcela nový, ale nabízíme také úpravu již existujících. Nejčastěji děláme eshopy v <a href="https://shopify.com">Shopify</a>, a pro menší firmy, nabízíme i jednodušší eshopy s nižší cenou na provoz.</Item>
-    <Item title="SEO Optimalizace" icon="query_stats">SEO je základem každé dobré stránky. A dokáže pomoct vaší firmě ve zviditelnění. SEO už se nějakou dobu věnujeme a dokonce jsme vytvořili <a href="https://www.npmjs.com/package/astro-og-image">nástroj pro SEO optimalizaci</a>, který využívá přes 200 lidí.</Item>
-    <Item title="Zabezpečení stránky a správa domény" icon="lock">Nevíte si rady s nastavením vaší domény? Rádi vám pomůžeme a navíc vám i stránku zabezpečíme jelikož, zabezpečená stránka je v dnešní době nutností.</Item>
-    <Item title="Online Marketing" icon="add_business">Online presence je v dnešní době pro firmy důležitá pokud si chce najít zákazníky. A proto využíváme služeb jako Google My Bussines <a href="/assets/google_my_business.pdf">(na který jsme certifikovaní)</a> a Firmy.cz</Item>
-    <Item title="Upravitelný stránky" icon="edit_note">Pokud se obsah vašich stránek mění, ať už je to zboží na skladě, či nové akce, tak je tento typ stránek pro vás. Všechen obsah na stránce bude zcela upravitelný, a s minimální cenou na provoz</Item>
-    <Item title="Grafika" icon="design_services">Pomůžeme vám vytvořit novou grafiku, ať logo, plakát či jidélniček. Umíme jak rastrovou ta vektorovu grafiku.</Item>
-    <Item title="Komplexní aplikace" icon="apps">Mimojiné také umíme vytvářet komplexní webové aplikace pro interní použití, jako software pro management skladů, či menší sociální sítě.</Item>
+    <Item title="Webové stránky" icon="language"
+      >Webové stranky jsou naše specialita. Tvorbě webových stránek se věnujeme
+      už řadu let. A za tu dobu jsme se toho dost naučili. K tvorbě vždy
+      využíváme nejmodernější technologie.
+    </Item>
+    <Item title="E-shopy" icon="storefront"
+      >E-shopy jsou nejlepší způsob jak rozšířit vaší firmu. E-shopy děláme
+      zcela nový, ale nabízíme také úpravu již existujících. Nejčastěji děláme
+      eshopy v <a href="https://shopify.com">Shopify</a>, a pro menší firmy,
+      nabízíme i jednodušší eshopy s nižší cenou na provoz.
+    </Item>
+    <Item title="SEO Optimalizace" icon="query_stats"
+      >SEO je základem každé dobré stránky. A dokáže pomoct vaší firmě ve
+      zviditelnění. SEO už se nějakou dobu věnujeme a dokonce jsme vytvořili <a
+        href="https://www.npmjs.com/package/astro-og-image"
+        >nástroj pro SEO optimalizaci
+      </a>, který využívá přes 200 lidí.
+    </Item>
+    <Item title="Zabezpečení stránky a správa domény" icon="lock"
+      >Nevíte si rady s nastavením vaší domény? Rádi vám pomůžeme a navíc vám i
+      stránku zabezpečíme jelikož, zabezpečená stránka je v dnešní době
+      nutností.
+    </Item>
+    <Item title="Online Marketing" icon="add_business"
+      >Online presence je v dnešní době pro firmy důležitá pokud si chce najít
+      zákazníky. A proto využíváme služeb jako Google My Bussines <a
+        href="/assets/google_my_business.pdf"
+        >(na který jsme certifikovaní)
+      </a> a Firmy.cz
+    </Item>
+    <Item title="Upravitelný stránky" icon="edit_note"
+      >Pokud se obsah vašich stránek mění, ať už je to zboží na skladě, či nové
+      akce, tak je tento typ stránek pro vás. Všechen obsah na stránce bude
+      zcela upravitelný, a s minimální cenou na provoz
+    </Item>
+    <Item title="Grafika" icon="design_services"
+      >Pomůžeme vám vytvořit novou grafiku, ať logo, plakát či jidélniček. Umíme
+      jak rastrovou ta vektorovu grafiku.
+    </Item>
+    <Item title="Komplexní aplikace" icon="apps"
+      >Mimojiné také umíme vytvářet komplexní webové aplikace pro interní
+      použití, jako software pro management skladů, či menší sociální sítě.
+    </Item>
   </div>
 </section>

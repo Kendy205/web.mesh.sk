@@ -1,17 +1,14 @@
 ---
 interface Props {
-  link?: string
+  link?: string;
 }
 
-const {link} = Astro.props
-
+const { link } = Astro.props;
 ---
 
 <a class="relative cursor-pointer" href={link}>
   <div class="text-black duration-300 flex items-center justify-center gap-4">
-    <span class="material-symbols-outlined">
-      open_in_new
-    </span>
-    <div class="hover:underline pb-1"><slot/></div>
+    <span class="material-symbols-outlined"> open_in_new</span>
+    <div class="hover:underline pb-1"><slot></slot></div>
   </div>
 </a>

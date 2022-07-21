@@ -1,46 +1,46 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
 import PortfolioCard from "./PortfolioCard.astro";
-import {Language} from "../types"
+import { Language } from "../types";
 
-const {portfolio} = Astro.props as Language
+const { portfolio } = Astro.props as Language;
 ---
 
-<section class="section lg:p-32 p-4"  id="portfolio" data-aos="fade-up">
+<section class="section lg:p-32 p-4" id="portfolio" data-aos="fade-up">
   <SectionHeading>Portfolio</SectionHeading>
   <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
-  <div class="col-span-2">
-    <PortfolioCard
-      alt="Good Fellas"
-      description="Jednostránkový web pro vyhlášený Lounský barbershop, který se díky naší SEO optimalizaci dostal na první příčku vyhledávání Google."
-      heading="Goodfellas Barbershop"
-      link="https://barbershoplouny.cz/"
-      image="/assets/barbershop.jpg"
-      shortlink="barbershoplouny.cz"
-      main={true}
-    />
-  </div>
-  <div class="">
-    <PortfolioCard
-      alt="Maturita Book"
-      description="Webová aplikace, pro Lounské gymnázium. Na webu je seznam všech knížek pro maturitní četbu, a ke každé knížce je možné přidat komentář, nebo ji přidat do oblíbených."
-      heading="Maturita Book"
-      link="https://maturita-book.vercel.app"
-      image="/assets/maturita_book.jpg"
-      shortlink="maturita-book.vercel.app"
-    />
-  </div>
-  <div class="">
-    <PortfolioCard
-      alt="Astro Open Graph Image"
-      description="Nástroj pro automatické generování Open Graph obrázků, které pomáhají SEO optimalizaci. Nástroj už využilo přes 300 lidí."
-      heading="Astro Open Graph Image"
-      link="https://www.npmjs.com/package/astro-og-image"
-      image= "/assets/astro-og-image.jpg"
-      shortlink="npmjs.com/package/astro-og-image"
-    />
-  </div>
-<!--   <div class="">
+    <div class="col-span-2">
+      <PortfolioCard
+        alt="Good Fellas"
+        description="Jednostránkový web pro vyhlášený Lounský barbershop, který se díky naší SEO optimalizaci dostal na první příčku vyhledávání Google."
+        heading="Goodfellas Barbershop"
+        link="https://barbershoplouny.cz/"
+        image="/assets/barbershop.jpg"
+        shortlink="barbershoplouny.cz"
+        main={true}
+      />
+    </div>
+    <div class="">
+      <PortfolioCard
+        alt="Maturita Book"
+        description="Webová aplikace, pro Lounské gymnázium. Na webu je seznam všech knížek pro maturitní četbu, a ke každé knížce je možné přidat komentář, nebo ji přidat do oblíbených."
+        heading="Maturita Book"
+        link="https://maturita-book.vercel.app"
+        image="/assets/maturita_book.jpg"
+        shortlink="maturita-book.vercel.app"
+      />
+    </div>
+    <div class="">
+      <PortfolioCard
+        alt="Astro Open Graph Image"
+        description="Nástroj pro automatické generování Open Graph obrázků, které pomáhají SEO optimalizaci. Nástroj už využilo přes 300 lidí."
+        heading="Astro Open Graph Image"
+        link="https://www.npmjs.com/package/astro-og-image"
+        image="/assets/astro-og-image.jpg"
+        shortlink="npmjs.com/package/astro-og-image"
+      />
+    </div>
+    <!--   <div class="">
     <PortfolioCard
       alt="Osobní stránka - Tomáš Kebrle"
       description="Osobní stránka a blog dohromady. "
@@ -50,10 +50,5 @@ const {portfolio} = Astro.props as Language
       shortlink="tomaskebrle.cz"
     />
   </div> -->
-
-
-  
   </div>
-  
-
 </section>

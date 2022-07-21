@@ -1,70 +1,139 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from "../components/Header.astro"
-import Offers from "../components/Offers.astro"
-import Portfolio from "../components/Portfolio.astro"
-import Team from "../components/Team.astro"
-import Contact from "../components/Contact.astro"
-let title = 'Web Mesh';
-let description = 'Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.';
-let permalink = 'https://web.mesh.sk';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Offers from "../components/Offers.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Team from "../components/Team.astro";
+import Contact from "../components/Contact.astro";
+let title = "Web Mesh";
+let description =
+  "Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.";
+let permalink = "https://web.mesh.sk";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead {title} {description} {permalink} />
-    <script src="https://kit.fontawesome.com/0611ddbb9f.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js" integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css" integrity="sha512-zDKgq9gDZL1N3buxzFPZjHwqDOFsgTyhR0aJtXLFTIjEFovumXMaVeF6iBUZ/Rc4Mb0IqRrhqAY+RY7OCUBo6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://kit.fontawesome.com/0611ddbb9f.js"
+      crossorigin="anonymous"
+    >
+
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
+      integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js"
+      integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css"
+      integrity="sha512-zDKgq9gDZL1N3buxzFPZjHwqDOFsgTyhR0aJtXLFTIjEFovumXMaVeF6iBUZ/Rc4Mb0IqRrhqAY+RY7OCUBo6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+    </script>
   </head>
   <body>
     <style is:inline>
-      main{
-        background-image: linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url("/assets/bg.jpg");
+      main {
+        background-image: linear-gradient(
+            45deg,
+            #040b25 10%,
+            rgba(4, 11, 37, 0.85) 100%
+          ),
+          url("/assets/bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
       }
 
       /*Changes the color of the navigation dots on the side*/
-      #fp-nav ul li a span, .fp-slidesNav ul li a span{
-        background : #acacac
+      #fp-nav ul li a span,
+      .fp-slidesNav ul li a span {
+        background: #acacac;
       }
     </style>
     <main id="body">
       <div id="fullpage">
-        <Header/>
-        <Team/>
-        <Offers/>
-        <Portfolio/>
-        <Contact/>
+        <Header />
+        <Team />
+        <Offers />
+        <Portfolio />
+        <Contact />
       </div>
     </main>
-    
+
     <script is:inline>
-      if(window !== undefined){
-        new fullpage('#fullpage', {
-        autoScrolling: true,
-        css3: true,
-        credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
-        navigation: true,
-        navigationTooltips: ["Úvod", "Co nabízíme", "Portfolio", "Technologie", "Náš tým", "Kontakt"],
-        verticalCentered: true,
-        beforeLeave: (origin, destination, direction, trigger) => {
-          console.log(destination)
-          const body = document.getElementById("body")
-          if(destination.index === 0){
-            gsap.fromTo("#body", 
-            {backgroundImage: "linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.5) 100%), url(\"/assets/bg.jpg\")"},
-              {backgroundImage: "linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url(\"/assets/bg.jpg\")", duration: 0.7});
-          } else if (origin.index === 0) {
-            gsap.fromTo("#body", 
-            {backgroundImage: "linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url(\"/assets/bg.jpg\")"},
-              {backgroundImage: "linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.4) 100%), url(\"/assets/bg.jpg\")", duration: 0.7});
-          }
-        }
-      });
+      if (window !== undefined) {
+        new fullpage("#fullpage", {
+          autoScrolling: true,
+          css3: true,
+          credits: {
+            enabled: false,
+            label: "Made with fullPage.js",
+            position: "right",
+          },
+          navigation: true,
+          navigationTooltips: [
+            "Úvod",
+            "Co nabízíme",
+            "Portfolio",
+            "Technologie",
+            "Náš tým",
+            "Kontakt",
+          ],
+          verticalCentered: true,
+          beforeLeave: (origin, destination, direction, trigger) => {
+            console.log(destination);
+            const body = document.getElementById("body");
+            if (destination.index === 0) {
+              gsap.fromTo(
+                "#body",
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.5) 100%), url("/assets/bg.jpg")',
+                },
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url("/assets/bg.jpg")',
+                  duration: 0.7,
+                }
+              );
+            } else if (origin.index === 0) {
+              gsap.fromTo(
+                "#body",
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url("/assets/bg.jpg")',
+                },
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.4) 100%), url("/assets/bg.jpg")',
+                  duration: 0.7,
+                }
+              );
+            }
+          },
+        });
       }
     </script>
   </body>
