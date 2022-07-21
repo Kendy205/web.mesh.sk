@@ -1,14 +1,10 @@
 ---
-const {title, icon} = Astro.props
+const { title, icon } = Astro.props;
 ---
 
 <style>
   .material-symbols-outlined {
-    font-variation-settings:
-      'FILL'0,
-      'wght'200,
-      'GRAD'0,
-      'opsz'48
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
   }
 </style>
 
@@ -19,5 +15,5 @@ shadow-lg hover:shadow-xl hover:backdrop-blur-sm hover:rotate-180 hover:z-50 dur
     {icon}
   </span>
   <h2 class="text-4xl flex justify-center font-display mb-6">{title}</h2>
-  <slot />
+  <slot></slot>
 </span>

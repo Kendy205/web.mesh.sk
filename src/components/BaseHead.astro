@@ -1,9 +1,9 @@
 ---
-
 export interface Props {
-	title: string;
-	description: string;
-	slug: string;
+  title?: string;
+  description?: string;
+  slug?: string;
+  permalink?: string;
 }
 const { title, description, slug, publishDate } = Astro.props;
 ---
@@ -24,37 +24,49 @@ const { title, description, slug, publishDate } = Astro.props;
 <meta property="og:url" content={`https://tomaskebrle.cz/posts/${slug}`} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={slug !== undefined ? `/assets/posts/${slug}.png` : `/assets/tomas_kebrle.png`} />
+<meta
+  property="og:image"
+  content={slug !== undefined
+    ? `/assets/posts/${slug}.png`
+    : `/assets/tomas_kebrle.png`}
+/>
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={`https://tomaskebrle.cz/posts/${slug}`} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={slug !== undefined ? `/assets/posts/${slug}.png` : `/assets/tomas_kebrle.png`} />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css" integrity="sha512-hDXpx6vRwBR+f4rnj8BDQRpwfi4lvztz1KPkBPCG2XkTKiJ5Y6zq7/NsDmJRIQbquKchG0DVc6gmZiOE0ZXrvg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta
+  property="twitter:image"
+  content={slug !== undefined
+    ? `/assets/posts/${slug}.png`
+    : `/assets/tomas_kebrle.png`}
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css"
+  integrity="sha512-hDXpx6vRwBR+f4rnj8BDQRpwfi4lvztz1KPkBPCG2XkTKiJ5Y6zq7/NsDmJRIQbquKchG0DVc6gmZiOE0ZXrvg=="
+  crossorigin="anonymous"
+/>
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&family=Noto+Sans:wght@800;900&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto+Mono?category=Monospace">
-<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Press+Start+2P&display=swap"
+  rel="stylesheet"
+/>
 
 <style>
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
 </style>

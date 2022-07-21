@@ -1,37 +1,65 @@
 ---
-import SectionHeading from "./SectionHeading.astro"
+import SectionHeading from "./SectionHeading.astro";
 ---
 
-<div class="p-32 section" id="contact" data-aos="fade-up">
+<div class="p-32 section" id="contact">
   <SectionHeading>Kontakt</SectionHeading>
   <p class="text-zinc-200 mb-2">
-    Líbí se vám naše práce? Chtěli by jste vytvořit stránku? Tak neváhejte a kontaktujte nás zde nebo nám napište e-mail
-    na <a href="mailto:strankylouny@gmail.com" class="text-zinc-400 hover:underline">strankylouny@gmail.com</a>
+    Líbí se vám naše práce? Chtěli by jste vytvořit stránku? Tak neváhejte a
+    kontaktujte nás zde nebo nám napište e-mail na <a
+      href="mailto:strankylouny@gmail.com"
+      class="text-zinc-400 hover:underline"
+      >strankylouny@gmail.com
+    </a>
   </p>
 
-  <form name="contact" class="w-full" action="/succes" netlify-honeypot="field" data-netlify-recaptcha="true"
-    data-netlify="true">
+  <form
+    name="contact"
+    class="w-full"
+    action="/succes"
+    netlify-honeypot="field"
+    data-netlify-recaptcha="true"
+    data-netlify="true"
+  >
     <div class="hidden">
       <label>
         Nevyplňujte pokud jste člověk <input name="bot-field" />
       </label>
     </div>
     <div class="my-8">
-      <label for="email" class="font-semibold text-zinc-200">E-mail na který vás můžeme kontaktovat zpátky:</label>
-      <input type="email" name="email" id="email" class="p-2 w-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
+      <label for="email" class="font-semibold text-zinc-200"
+        >E-mail na který vás můžeme kontaktovat zpátky:
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="p-2 w-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
-shadow-lg hover:shadow-xl duration-300 hover:backdrop-blur-xl hover:bg-opacity-20 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none" placeholder="jmeno@priklad.cz">
+shadow-lg hover:shadow-xl duration-300 hover:backdrop-blur-xl hover:bg-opacity-20 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"
+        placeholder="jmeno@priklad.cz"
+      />
     </div>
     <div class="my-8">
-      <label for="message" class="font-semibold text-zinc-200">Vaše zpráva:</label>
-      <textarea name="message" id="message" rows={10} class="w-full p-2 bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
+      <label for="message" class="font-semibold text-zinc-200"
+        >Vaše zpráva:
+      </label>
+      <textarea
+        name="message"
+        id="message"
+        rows={10}
+        class="w-full p-2 bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
-shadow-lg hover:shadow-xl duration-300 hover:backdrop-blur-xl hover:bg-opacity-20 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"></textarea>
+shadow-lg hover:shadow-xl duration-300 hover:backdrop-blur-xl hover:bg-opacity-20 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"
+      ></textarea>
     </div>
     <div data-netlify-recaptcha="true"></div>
     <div class="my-2">
-      <button class="bg-gray-100 text-white p-2 hover:bg-opacity-20 duration-300 rounded-lg bg-clip-padding backdrop-filter
-backdrop-blur-md bg-opacity-10 shadow-lg hover:shadow-xl">Odeslat zprávu</button>
+      <button
+        class="bg-gray-100 text-white p-2 hover:bg-opacity-20 duration-300 rounded-lg bg-clip-padding backdrop-filter
+backdrop-blur-md bg-opacity-10 shadow-lg hover:shadow-xl"
+        >Odeslat zprávu
+      </button>
     </div>
   </form>
 </div>

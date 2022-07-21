@@ -1,22 +1,50 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from "../components/Header.astro"
-import About from "../components/About.astro"
-import Portfolio from "../components/Portfolio.astro"
-import Team from "../components/Team.astro"
-let title = 'Web Mesh';
-let description = 'Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.';
-let permalink = 'https://web.mesh.sk';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Offers from "../components/Offers.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Team from "../components/Team.astro";
+import Contact from "../components/Contact.astro";
+let title = "Web Mesh";
+let description =
+  "Hello 👋, I am a programmer, web-developer and web-designer from Czech republic.";
+let permalink = "https://web.mesh.sk";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead {title} {description} {permalink} />
-    <script src="https://kit.fontawesome.com/0611ddbb9f.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js" integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css" integrity="sha512-zDKgq9gDZL1N3buxzFPZjHwqDOFsgTyhR0aJtXLFTIjEFovumXMaVeF6iBUZ/Rc4Mb0IqRrhqAY+RY7OCUBo6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
+      integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+    </script>
+    <!--    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js"
+      integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    > 
+
+    </script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css"
+      integrity="sha512-zDKgq9gDZL1N3buxzFPZjHwqDOFsgTyhR0aJtXLFTIjEFovumXMaVeF6iBUZ/Rc4Mb0IqRrhqAY+RY7OCUBo6A=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+    </script>
   </head>
   <body>
     <style is:inline>
@@ -27,20 +55,21 @@ let permalink = 'https://web.mesh.sk';
       }
 
       /*Changes the color of the navigation dots on the side*/
-      #fp-nav ul li a span, .fp-slidesNav ul li a span{
-        background : #acacac
+      #fp-nav ul li a span,
+      .fp-slidesNav ul li a span {
+        background: #acacac;
       }
     </style>
     <main id="body">
       <div id="fullpage">
-        <Header/>
-        <Team/>
-        <About/>
-        <Portfolio/>
-        
+        <Header />
+        <Team />
+        <Offers />
+        <Portfolio />
+        <Contact />
       </div>
     </main>
-    
+
     <script is:inline>
       if(window !== undefined){
         new fullpage('#fullpage', {
