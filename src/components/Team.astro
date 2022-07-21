@@ -1,13 +1,11 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
-import { Language } from "../types";
 import PortfolioCard from "./PortfolioCard.astro";
-import Button from "./Button.astro";
-const { contact } = Astro.props as Language;
+const { contact } = Astro.props;
 ---
 
 <section class="section ff">
-  <div id="contact" data-aos="fade-up">
+  <div id="contact">
     <h2 class=" text-7xl text-white font-display mb-12 text-center w-full">
       O nás
     </h2>
@@ -43,9 +41,6 @@ const { contact } = Astro.props as Language;
           alt="Tomáš kebrle"
           class="rounded-full h-72"
         />
-        <!-- <Button link={link}>
-              {shortlink}
-            </Button> -->
       </div>
       <div
         data-tilt
@@ -85,20 +80,7 @@ const { contact } = Astro.props as Language;
           alt="Daniel Ransdorf"
           class="rounded-full h-72"
         />
-        <!-- <Button link={link}>
-              {shortlink}
-            </Button> -->
       </div>
-      <!-- <div class="bg-white hover:ring-4 ring-0 ring-black p-4 w-full h-full duration-150 mb-4 ring-inset grid place-items-center">
-            <img src="/assets/dan.jpg" alt="Daniel Ransdorf" class="rounded-full w-96">
-            <h3 class="text-black font-serif text-4xl my-4">Daniel Ransdorf</h3>
-            <p class="text-zinc-600 text-lg mb-12">
-              Studuje na GVH Louny, je mu 16 let, a o web-design se už zajímá 4 roky. Mimo to také rád skautuje a držitelem <a href="/assets/dofe_tomas.pdf" class="text-zinc-800 hover:underline">DofE bronzové ceny</a>.
-            </p>
-          
-            
-          </div>
-        </div> -->
     </div>
     <style>
       .ff {
@@ -106,6 +88,7 @@ const { contact } = Astro.props as Language;
         justify-content: center;
         align-items: center;
       }
+
       .member {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
@@ -114,9 +97,11 @@ const { contact } = Astro.props as Language;
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.25);
       }
+
       .z-big {
         transform: translateZ(50px);
       }
+
       .z-lil {
         transform: translateZ(35px);
       }
