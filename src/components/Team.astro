@@ -6,16 +6,15 @@
   const {contact} = Astro.props as Language
 ---
 
-<section class="section">
-    <div class="gap-8 pb-32" id="contact" data-aos="fade-up">
-        <SectionHeading>Náš tým</SectionHeading>
-        <div class="flex gap-6 flex-col justify-center items-center">
-          <div data-tilt data-tilt-max="3" data-tilt-speed="3800" class="h-full bg-gray-100 rounded-2xl bg-clip-padding backdrop-filter w-7/12
-          backdrop-blur-md bg-opacity-10 text-white
-          shadow-lg hover:shadow-xl duration-300 p-20 flex flex-row justify-around items-center relative member" id="tom">
-            <div class="w-1/3 card_text">
-               <h3 class="text-5xl font-display font-bold tracking-wider my-4 z-big">Tomáš Kebrle</h3>
-            <p class="text-zinc-200 text-lg mb-12 z-lil">
+<section class="section ff">
+    <div id="contact" data-aos="fade-up">
+      <h2 class=" text-7xl text-white font-display mb-12 text-center w-full">O nás</h2>
+        <div class="flex gap-10 justify-center items-center">
+          <div data-tilt data-tilt-max="1" data-tilt-perspective="600"  data-tilt-speed="3800" class="h-full  backdrop-filter w-5/12
+          p-10 px-16 flex flex-row justify-between items-center relative member" id="tom">
+            <div class="w-5/12 card_text">
+               <h3 class="text-4xl font-display font-bold tracking-wider my-4 z-big text-white">Tomáš Kebrle</h3>
+            <p class="text-zinc-200 text-md z-lil">
               Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4 roky. Mimo programování rád skautuje. Je zaslouženým držitelem <a href="/assets/dofe_tomas.pdf" class="text-zinc-300 hover:text-white duration-200"> mezinárodní bronzové ceny vévody z Edinburghu</a>.
             </p> 
             </div>
@@ -25,13 +24,15 @@
               {shortlink}
             </Button> -->
           </div>
-          <div data-tilt data-tilt-max="3" data-tilt-speed="3800" class="h-full bg-gray-100 rounded-2xl bg-clip-padding backdrop-filter w-7/12
-          backdrop-blur-md bg-opacity-10 text-white
-          shadow-lg hover:shadow-xl duration-300 p-20 flex flex-row justify-around items-center relative member" id="dan">
-            <div class="w-1/3 card_text">
-               <h3 class="text-5xl font-display font-bold tracking-wider my-4 z-big">Daniel Ransdorf</h3>
-            <p class="text-zinc-200 text-lg mb-12 z-lil">
-                Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na weby se specializuje rok. Ve volném čase rád sportuje. Prošel <a href="/assets/dofe_tomas.pdf" class="text-zinc-300 hover:text-white duration-200">vyhlášeným kurzem od Jonase Schmedtmanna</a> a drží <a href="/assets/dofe_tomas.pdf" class="text-zinc-300 hover:text-white duration-200"> mezinárodní bronzovou cenu DofE</a>.
+          <div data-tilt data-tilt-max="1" data-tilt-perspective="600" data-tilt-speed="3800" class="h-full  backdrop-filter w-5/12
+           p-10 px-16 flex flex-row justify-between items-center relative member" id="dan">
+            <div class="w-5/12 card_text">
+               <h3 class="text-4xl font-display text-white font-bold tracking-wider my-4 z-big">Daniel Ransdorf</h3>
+            <p class="text-zinc-200 text-md z-lil">
+                Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na weby se specializuje rok. Ve volném čase rád sportuje. Prošel 
+                <a href="/assets/dofe_tomas.pdf" class="text-zinc-300 hover:text-white duration-200">vyhlášeným kurzem od Jonase Schmedtmanna</a> 
+                a drží 
+                <a href="/assets/dofe_tomas.pdf" class="text-zinc-300 hover:text-white duration-200"> mezinárodní bronzovou cenu DofE</a>.
             </p> 
             </div>
             
@@ -52,7 +53,19 @@
         </div> -->
       </div>
       <style>
-       
+        .ff{
+          display:flex;
+          justify-content:center;
+          align-items: center;
+        }
+       .member{
+        background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.25);
+       }
          .z-big{
             transform: translateZ(50px);
         }

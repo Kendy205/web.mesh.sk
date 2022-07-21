@@ -55,11 +55,11 @@ let permalink = 'https://web.mesh.sk';
           const body = document.getElementById("body")
           if(destination.index === 0){
             gsap.fromTo("#body", 
-              {backgroundImage: "linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.5) 100%), url(\"/assets/bg.jpg\")"},
+            {backgroundImage: "linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.5) 100%), url(\"/assets/bg.jpg\")"},
               {backgroundImage: "linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url(\"/assets/bg.jpg\")", duration: 0.7});
           } else if (origin.index === 0) {
             gsap.fromTo("#body", 
-              {backgroundImage: "linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url(\"/assets/bg.jpg\")"},
+            {backgroundImage: "linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url(\"/assets/bg.jpg\")"},
               {backgroundImage: "linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.4) 100%), url(\"/assets/bg.jpg\")", duration: 0.7});
           }
         }
