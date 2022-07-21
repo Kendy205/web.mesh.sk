@@ -14,6 +14,7 @@ const { image, alt, heading, description, link, shortlink, main }: Props =
 ---
 
 <section
+  id="#portfoliocard"
   class="h-full bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
         backdrop-blur-md bg-opacity-10 text-white
         shadow-lg hover:shadow-xl duration-300 p-8 flex flex-col hover:-translate-y-1 relative sekce"
@@ -34,7 +35,17 @@ const { image, alt, heading, description, link, shortlink, main }: Props =
       </a>
     </span>
     <span>
-      {main ? <img src={image} alt="" class="rounded-lg" /> : <div />}
+      {main ? (
+        <img src={image} alt="" class="rounded-lg hidden lg:block" />
+      ) : (
+        <div />
+      )}
     </span>
   </div>
 </section>
+
+<style>
+  .sekce {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+</style>
