@@ -8,7 +8,9 @@ const { title, icon } = Astro.props;
   }
 </style>
 
-<span class="h-full bg-gray-100  rounded-md bg-clip-padding backdrop-filter
+<span
+  id="item"
+  class="h-full bg-gray-100 rounded-md bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
 shadow-lg hover:shadow-xl hover:backdrop-blur-sm hover:z-50 duration-300 p-4 item">
   <span class="material-symbols-outlined text-8xl flex justify-center">
@@ -17,11 +19,9 @@ shadow-lg hover:shadow-xl hover:backdrop-blur-sm hover:z-50 duration-300 p-4 ite
   <h2 class="text-4xl flex justify-center font-display mb-6">{title}</h2>
   <slot></slot>
 </span>
+
 <style>
-  .item{
-    transition-duration: 300ms;
+  #item {
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
-.item:hover{
-transform: scale(1.5) rotate(360deg)
-}
 </style>

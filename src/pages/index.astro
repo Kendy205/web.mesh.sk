@@ -23,14 +23,6 @@ let permalink = "https://web.mesh.sk";
     >
 
     </script>
-    <!--    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.extensions.min.js"
-      integrity="sha512-VtOcayHH4bfSUajzLiExkPE2HZipNXtYize8nIhFbasshi9c5AbtjSWDHYO+U2yhFyqcIGp+nXGX5rau1Iz6cQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    > 
-
-    </script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css"
@@ -63,36 +55,63 @@ let permalink = "https://web.mesh.sk";
     <main id="body">
       <div id="fullpage">
         <Header />
-        <Team />
         <Offers />
         <Portfolio />
+        <Team />
         <Contact />
       </div>
     </main>
 
     <script is:inline>
-      if(window !== undefined){
-        new fullpage('#fullpage', {
-        autoScrolling: true,
-        css3: true,
-        credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
-        navigation: true,
-        navigationTooltips: ["Úvod", "Co nabízíme", "Portfolio", "Technologie", "Náš tým", "Kontakt"],
-        verticalCentered: true,
-        beforeLeave: (origin, destination, direction, trigger) => {
-          console.log(destination)
-          const body = document.getElementById("body")
-          if(destination.index === 0){
-            gsap.fromTo("#body", 
-            {backgroundImage: "linear-gradient(45deg, #d13abd 10%,  #eebd89 100%), url(\"/assets/bg.jpg\")"},
-              {backgroundImage: "linear-gradient(45deg, #d13abd 10%,  #eebd89 100%),url(\"/assets/bg.jpg\")", duration: 0.7});
-          } else if (origin.index === 0) {
-            gsap.fromTo("#body", 
-            {backgroundImage: "linear-gradient(45deg, #d13abd 10%,  #eebd89 100%),url(\"/assets/bg.jpg\")"},
-              {backgroundImage: "linear-gradient(45deg, #d13abd 10%,  #eebd89 100%), url(\"/assets/bg.jpg\")", duration: 0.7});
-          }
-        }
-      });
+      if (window !== undefined) {
+        new fullpage("#fullpage", {
+          autoScrolling: true,
+          css3: true,
+          credits: {
+            enabled: false,
+            label: "Made with fullPage.js",
+            position: "right",
+          },
+          navigation: true,
+          navigationTooltips: [
+            "Úvod",
+            "Co nabízíme",
+            "Portfolio",
+            "Technologie",
+            "Náš tým",
+            "Kontakt",
+          ],
+          verticalCentered: true,
+          beforeLeave: (origin, destination, direction, trigger) => {
+            if (destination.index === 0) {
+              gsap.fromTo(
+                "#body",
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.5) 100%), url("/assets/bg.jpg")',
+                },
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url("/assets/bg.jpg")',
+                  duration: 0.7,
+                }
+              );
+            } else if (origin.index === 0) {
+              gsap.fromTo(
+                "#body",
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, #040b25 10%,  rgba(4, 11, 37, 0.85) 100%),url("/assets/bg.jpg")',
+                },
+                {
+                  backgroundImage:
+                    'linear-gradient(45deg, rgba(4, 11, 37, 0.85) 10%,  rgba(4, 11, 37, 0.4) 100%), url("/assets/bg.jpg")',
+                  duration: 0.7,
+                }
+              );
+            }
+          },
+        });
       }
     </script>
   </body>
