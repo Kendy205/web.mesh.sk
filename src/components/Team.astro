@@ -21,7 +21,7 @@ const { contact } = Astro.props;
       >
         <div class="w-5/12 card_text">
           <h3
-            class="text-4xl font-display font-bold tracking-wider z-big text-white name"
+            class="text-4xl font-display font-bold tracking-wider z-big text-white"
           >
             Tomáš Kebrle
           </h3>
@@ -36,24 +36,36 @@ const { contact } = Astro.props;
           </p>
         </div>
 
-        <img
-          src="/assets/tomaskebrle.jpg"
-          alt="Tomáš kebrle"
-          class="rounded-full h-72"
-        />
-      </div>
-      <div
-        data-tilt
-        data-tilt-max="1"
-        data-tilt-perspective="600"
-        data-tilt-speed="3800"
-        class="h-full  backdrop-filter w-5/12
-           p-10 px-16 flex flex-row justify-between items-center relative member"
-        id="dan"
-      >
-        <div class="w-5/12 card_text">
-          <h3
-            class="text-4xl font-display text-white font-bold tracking-wider z-big name"
+      <img
+        src="/assets/tomaskebrle.png"
+        alt="Tomáš kebrle"
+        class="rounded-full sm:h-72 sm:w-72 w-48 h-48 aspect-square"
+      />
+    </div>
+    <div
+      data-tilt
+      data-tilt-max="1"
+      data-tilt-perspective="600"
+      data-tilt-speed="3800"
+      class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
+          backdrop-blur-md bg-opacity-10
+           p-8 xl:px-16 member grid place-items-center h-full xl:flex"
+      id="dan"
+    >
+      <div class="mb-4 ">
+        <h3 class="text-4xl font-display font-bold tracking-wider z-big text-white text-center">Daniel Ransdorf</h3>
+        <p class="text-zinc-100 text-md paragraph text-base">
+          Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na
+          weby se specializuje rok. Ve volném čase rád sportuje. Prošel
+          <a
+            href="/assets/dofe_tomas.pdf"
+            class="text-zinc-300 hover:text-white duration-200"
+            >vyhlášeným kurzem od Jonase Schmedtmanna
+          </a>
+          a drží
+          <a
+            href="/assets/dofe_tomas.pdf"
+            class="text-zinc-300 hover:text-white duration-200"
           >
             Daniel Ransdorf
           </h3>

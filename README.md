@@ -1,5 +1,4 @@
-# tomaskebrle.cz
+# Web-Mesh
+## web.mesh.sk
 
-My personal site built with Astro and TailwindCSS
-
-# web-mesh
+Site for our webdesing agency
