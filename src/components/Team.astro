@@ -9,23 +9,23 @@ const { contact } = Astro.props;
     <h2 class=" text-7xl text-white font-display mb-12 text-center w-full">
       O nás
     </h2>
-    <div class="flex gap-10 justify-center items-center">
+    <div class="flex gap-10 justify-center items-center karty">
       <div
         data-tilt
         data-tilt-max="1"
         data-tilt-perspective="600"
         data-tilt-speed="3800"
         class="h-full  backdrop-filter w-5/12
-          p-10 px-16 flex flex-row justify-between items-center relative member"
+          p-10 px-16 flex justify-between items-center relative member"
         id="tom"
       >
         <div class="w-5/12 card_text">
           <h3
-            class="text-4xl font-display font-bold tracking-wider my-4 z-big text-white"
+            class="text-4xl font-display font-bold tracking-wider z-big text-white name"
           >
             Tomáš Kebrle
           </h3>
-          <p class="text-zinc-200 text-md z-lil">
+          <p class="text-zinc-100 paragraph">
             Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4
             roky. Mimo programování rád skautuje. Je zaslouženým držitelem <a
               href="/assets/dofe_tomas.pdf"
@@ -53,11 +53,11 @@ const { contact } = Astro.props;
       >
         <div class="w-5/12 card_text">
           <h3
-            class="text-4xl font-display text-white font-bold tracking-wider my-4 z-big"
+            class="text-4xl font-display text-white font-bold tracking-wider z-big name"
           >
             Daniel Ransdorf
           </h3>
-          <p class="text-zinc-200 text-md z-lil">
+          <p class="text-zinc-100 text-md paragraph">
             Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a
             na weby se specializuje rok. Ve volném čase rád sportuje. Prošel
             <a
@@ -96,15 +96,80 @@ const { contact } = Astro.props;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.25);
+        padding-left:3.33vw;
+        padding-right:3.33vw;
+        padding-top:2.08vw;
+        padding-bottom:2.08vw;
       }
 
-      .z-big {
-        transform: translateZ(50px);
+      .name{
+        font-size:1.9vw;
+        margin-bottom:0.8vw;
       }
-
-      .z-lil {
-        transform: translateZ(35px);
+      .paragraph{
+font-size: .85vw;
       }
+      img{
+        width: 15vw;
+        height: 15vw;
+      }
+      @media (min-width:1921px){
+        .paragraph{
+font-size: 16px;
+      }
+      }
+      @media (max-width:1200px){
+      .karty{
+        flex-direction: column;
+      }
+      .name{
+        font-size:4vw;
+        margin-bottom:0.8vw;
+      }
+      .paragraph{
+font-size: 1.7vw;
+      }
+      img{
+        width: 25vw;
+        height: 25vw;
+      }
+      .member{
+        width:90%;
+      }
+      .card_text{
+        width: 55%;
+      }
+      }
+      @media (max-width:600px){
+        .karty{
+          gap:8px;
+        }
+        .member{
+          flex-direction: column;
+          padding-left:5vw;
+        padding-right:5vw;
+        padding-top:5vw;
+        padding-bottom:5vw;
+        gap: 15px;
+        }
+        img{
+          width: 40vw;
+        height: 40vw;
+        }
+        .card_text{
+          width:95%;
+          text-align: center;
+        }
+        .name{
+        font-size:8vw;
+        margin-bottom:0.8vw;
+      }
+      .paragraph{
+font-size: 3vw;
+      }
+      }
+     
+      
     </style>
     <script>
       import VanillaTilt from "vanilla-tilt";
