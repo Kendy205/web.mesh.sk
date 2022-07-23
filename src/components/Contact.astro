@@ -1,8 +1,9 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
+import Footer from "./Footer.astro";
 ---
 
-<div class=" p-4 lg:p-32 section" id="contact">
+<div class="p-4 lg:p-32 section" id="contact">
   <SectionHeading>Kontakt</SectionHeading>
   <p class="text-zinc-200 mb-2">
     Líbí se vám naše práce? Chtěli by jste vytvořit stránku? Tak neváhejte a
@@ -15,7 +16,7 @@ import SectionHeading from "./SectionHeading.astro";
 
   <form
     name="contact"
-    class="w-full"
+    class="w-full mb-12"
     action="/succes"
     netlify-honeypot="field"
     data-netlify-recaptcha="true"
@@ -47,7 +48,7 @@ shadow-lg hover:shadow-xl duration-300 focus:bg-opacity-20 focus:backdrop-blur-x
       <textarea
         name="message"
         id="message"
-        rows={10}
+        rows={6}
         class="w-full p-2 bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
 shadow-lg hover:shadow-xl duration-300 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"
@@ -63,4 +64,5 @@ backdrop-blur-md bg-opacity-10 shadow-lg hover:shadow-xl w-full lg:w-auto"
       </button>
     </div>
   </form>
+  <Footer />
 </div>
