@@ -4,92 +4,188 @@ import PortfolioCard from "./PortfolioCard.astro";
 const { contact } = Astro.props;
 ---
 
-<section class="section xl:!flex justify-center items-center lg:p-32 p-4">
-  <SectionHeading>O nás</SectionHeading>
-  <div class="grid xl:grid-cols-2 grid-cols-1 gap-8 place-items-center ">
-    <div
-      data-tilt
-      data-tilt-max="1"
-      data-tilt-perspective="600"
-      data-tilt-speed="3800"
-      class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
-          backdrop-blur-md bg-opacity-10 
-          p-8 xl:px-16 member grid place-items-center h-full xl:flex"
-      id="tom"
-    >
-      <div class="mb-4">
-        <h3 class="text-4xl font-display text-white">Tomáš Kebrle</h3>
-        <p class="text-zinc-100 paragraph text-base">
-          Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4
-          roky. Mimo programování rád skautuje. Je zaslouženým držitelem <a
-            href="/assets/dofe_tomas.pdf"
-            class="text-zinc-300 hover:text-white duration-200"
+<section class="section ff">
+  <div id="contact">
+    <h2 class=" text-7xl text-white font-display mb-12 text-center w-full onas">
+      O nás
+    </h2>
+    <div class="flex gap-10 justify-center items-center karty">
+      <div
+        data-tilt
+        data-tilt-max="1"
+        data-tilt-perspective="600"
+        data-tilt-speed="3800"
+        class="h-full  backdrop-filter w-5/12
+          p-10 px-16 flex justify-between items-center relative member"
+        id="tom"
+      >
+        <div class="w-5/12 card_text">
+          <h3
+            class="text-4xl font-display font-bold tracking-wider z-big text-white name"
           >
-            mezinárodní bronzové ceny vévody z Edinburghu.
-          </a>
-        </p>
-      </div>
+            Tomáš Kebrle
+          </h3>
+          <p class="text-zinc-100 paragraph">
+            Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4
+            roky. Mimo programování rád skautuje. Je zaslouženým držitelem <a
+              href="/assets/dofe_tomas.pdf"
+              class="text-zinc-300 hover:text-white duration-200"
+            >
+              mezinárodní bronzové ceny vévody z Edinburghu.
+            </a>
+          </p>
+        </div>
 
-      <img
-        src="/assets/tomaskebrle.jpg"
-        alt="Tomáš kebrle"
-        class="rounded-full sm:h-72 sm:w-72 w-48 h-48 aspect-square"
-      />
-    </div>
-    <div
-      data-tilt
-      data-tilt-max="1"
-      data-tilt-perspective="600"
-      data-tilt-speed="3800"
-      class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
-          backdrop-blur-md bg-opacity-10
-           p-8 xl:px-16 member grid place-items-center h-full xl:flex"
-      id="dan"
-    >
-      <div class="mb-4 ">
-        <h3 class="text-4xl font-display text-white">Daniel Ransdorf</h3>
-        <p class="text-zinc-100 text-md paragraph text-base">
-          Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na
-          weby se specializuje rok. Ve volném čase rád sportuje. Prošel
-          <a
-            href="/assets/dofe_tomas.pdf"
-            class="text-zinc-300 hover:text-white duration-200"
-            >vyhlášeným kurzem od Jonase Schmedtmanna
-          </a>
-          a drží
-          <a
-            href="/assets/dofe_tomas.pdf"
-            class="text-zinc-300 hover:text-white duration-200"
+        <img
+          src="/assets/tomaskebrle.jpg"
+          alt="Tomáš kebrle"
+          class="rounded-full h-72"
+        />
+      </div>
+      <div
+        data-tilt
+        data-tilt-max="1"
+        data-tilt-perspective="600"
+        data-tilt-speed="3800"
+        class="h-full  backdrop-filter w-5/12
+           p-10 px-16 flex flex-row justify-between items-center relative member"
+        id="dan"
+      >
+        <div class="w-5/12 card_text">
+          <h3
+            class="text-4xl font-display text-white font-bold tracking-wider z-big name"
           >
-            mezinárodní bronzovou cenu DofE.
-          </a>
-        </p>
-      </div>
+            Daniel Ransdorf
+          </h3>
+          <p class="text-zinc-100 text-md paragraph">
+            Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a
+            na weby se specializuje rok. Ve volném čase rád sportuje. Prošel
+            <a
+              href="/assets/kurz_dan.pdf"
+              class="text-zinc-300 hover:text-white duration-200"
+              >vyhlášeným kurzem od Jonase Schmedtmanna
+            </a>
+            a drží
+            <a
+              href="/assets/dofe_dan.png"
+              class="text-zinc-300 hover:text-white duration-200"
+            >
+              mezinárodní bronzovou cenu DofE.
+            </a>
+          </p>
+        </div>
 
-      <img
-        src="/assets/dan.jpg"
-        alt="Daniel Ransdorf"
-        class="rounded-full sm:h-72 sm:w-72 h-48 w-48 aspect-square"
-      />
+        <img
+          src="/assets/dan.jpg"
+          alt="Daniel Ransdorf"
+          class="rounded-full h-72"
+        />
+      </div>
     </div>
+    <style>
+      .ff {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .member {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding-left:3.33vw;
+        padding-right:3.33vw;
+        padding-top:2.08vw;
+        padding-bottom:2.08vw;
+      }
+
+      .name{
+        font-size:1.9vw;
+        margin-bottom:0.8vw;
+      }
+      .paragraph{
+font-size: .85vw;
+      }
+      img{
+        width: 15vw;
+        height: 15vw;
+      }
+      @media (min-width:1921px){
+        .paragraph{
+font-size: 16px;
+      }
+      }
+      @media (max-width:1200px){
+      .karty{
+        flex-direction: column;
+      }
+      .name{
+        font-size:4vw;
+        margin-bottom:0.8vw;
+      }
+      .paragraph{
+font-size: 1.7vw;
+      }
+      img{
+        width: 25vw;
+        height: 25vw;
+      }
+      .member{
+        width:90%;
+      }
+      .card_text{
+        width: 55%;
+      }
+      }
+      @media (max-width:600px){
+.onas{
+  margin-bottom:15px;
+}
+        .karty{
+          gap:8px;
+        }
+        .member{
+          flex-direction: column;
+          padding-left:5vw;
+        padding-right:5vw;
+        padding-top:5vw;
+        padding-bottom:5vw;
+        gap: 15px;
+        }
+        img{
+          width: 40vw;
+        height: 40vw;
+        }
+        .card_text{
+          width:95%;
+          text-align: center;
+        }
+        .name{
+        font-size:8vw;
+        margin-bottom:0.8vw;
+      }
+      .paragraph{
+font-size: 3.8vw;
+      }
+      }
+     
+      
+    </style>
+    <script>
+      import VanillaTilt from "vanilla-tilt";
+      VanillaTilt.init(document.querySelector("#tom"), {
+        max: 4,
+        speed: 500,
+        reverse: true,
+      });
+      VanillaTilt.init(document.querySelector("#dan"), {
+        max: 8,
+        speed: 500,
+        reverse: true,
+      });
+    </script>
   </div>
 </section>
-<script>
-  import VanillaTilt from "vanilla-tilt";
-  VanillaTilt.init(document.querySelector("#tom"), {
-    max: 4,
-    speed: 500,
-    reverse: true,
-  });
-  VanillaTilt.init(document.querySelector("#dan"), {
-    max: 8,
-    speed: 500,
-    reverse: true,
-  });
-</script>
-
-<style>
-  .member {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-  }
-</style>
