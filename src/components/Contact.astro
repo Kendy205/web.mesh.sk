@@ -16,7 +16,7 @@ import Footer from "./Footer.astro";
 
   <form
     name="contact"
-    class="w-full mb-12"
+    class="w-full mb-8"
     action="/succes"
     netlify-honeypot="field"
     data-netlify-recaptcha="true"
@@ -39,6 +39,7 @@ import Footer from "./Footer.astro";
 backdrop-blur-md bg-opacity-10 text-white
 shadow-lg hover:shadow-xl duration-300 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"
         placeholder="jmeno@priklad.cz"
+        style="border: 1px solid rgba(255, 255, 255, .2);"
       />
     </div>
     <div class="my-8">
@@ -52,7 +53,7 @@ shadow-lg hover:shadow-xl duration-300 focus:bg-opacity-20 focus:backdrop-blur-x
         class="w-full p-2 bg-gray-100 rounded-lg bg-clip-padding backdrop-filter
 backdrop-blur-md bg-opacity-10 text-white
 shadow-lg hover:shadow-xl duration-300 focus:bg-opacity-20 focus:backdrop-blur-xl focus:outline-none outline-none"
-      ></textarea>
+        style="border: 1px solid rgba(255, 255, 255, .2);"></textarea>
     </div>
     <div data-netlify-recaptcha="true"></div>
     <div class="my-2">
