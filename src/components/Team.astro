@@ -1,134 +1,39 @@
 ---
-
 import SectionHeading from "./SectionHeading.astro";
-
+import TeamMember from "./TeamMember.astro";
 ---
 
-<section class="section xl:!flex justify-center items-center lg:p-32 p-4" id="team">
+<section
+  class="section xl:!grid flex items-center justify-center lg:p-32 p-4"
+  id="team"
+>
   <SectionHeading>O nás</SectionHeading>
-  <div class="grid xl:grid-cols-2 grid-cols-1 gap-8 place-items-center ">
-    <div
-      data-tilt
-      data-tilt-max="1"
-      data-tilt-perspective="600"
-      data-tilt-speed="3800"
-      class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
-          backdrop-blur-md bg-opacity-10 
-          p-8 xl:px-16 member grid place-items-center h-full justify-between items-center xl:flex"
-      id="tom"
-    >
-      <div class="mb-4">
-        <h3 class="text-4xl font-display text-white text-center xl:text-left name">Tomáš</h3>
-        <p class="text-zinc-100 paragraph">
-          Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4
-          roky. Mimo programování rád skautuje. Je zaslouženým držitelem <a
-            href="/dofe_tom/"
-            class="text-zinc-300 hover:text-white duration-200"
-          >
-            mezinárodní bronzové ceny vévody z Edinburghu.
-          </a>
-        </p>
-      </div>
+  <div class="grid xl:grid-cols-3 grid-cols-1 gap-8 place-items-center ">
+    <TeamMember name="Tomáš" image="/assets/tomaskebrle.png">
+      Studuje Gymnázium v Lounech. Designem webů a grafikou se zabývá už 4 roky.
+      Mimo programování rád skautuje. Je zaslouženým držitelem <a
+        href="/dofe_tom/"
+        class="text-zinc-300 hover:text-white duration-200"
+      >
+        mezinárodní bronzové ceny vévody z Edinburghu.
+      </a>
+    </TeamMember>
 
-      <img
-        src="/assets/tomaskebrle.png"
-        alt="Tomáš kebrle"
-        class="rounded-full sm:h-72 sm:w-72 h-48 w-48 aspect-square"
-      />
-    </div>
-    <div
-      data-tilt
-      data-tilt-max="1"
-      data-tilt-perspective="600"
-      data-tilt-speed="3800"
-      class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
-          backdrop-blur-md bg-opacity-10
-           p-8 xl:px-16 member grid place-items-center h-full xl:flex"
-      id="dan"
-    >
-      <div class="mb-4 ">
-        <h3 class="text-4xl font-display text-white text-center xl:text-left name">Daniel</h3>
-        <p class="text-zinc-100 paragraph">
-          Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na
-          weby se specializuje rok. Ve volném čase rád sportuje. Prošel
-          <a
-            href="/udemy_dan/"
-            class="text-zinc-300 hover:text-white duration-200"
-            >vyhlášeným kurzem od Jonase Schmedtmanna
-          </a>
-          a drží
-          <a
-            href="/dofe_dan/"
-            class="text-zinc-300 hover:text-white duration-200"
-          >
-            mezinárodní bronzovou cenu DofE.
-          </a>
-        </p>
-      </div>
+    <TeamMember name="Daniel" image="/assets/dan.jpg">
+      Studuje na Gymnáziu v Lounech. V programování se pohybuje 3 roky a na weby
+      se specializuje rok. Ve volném čase rád sportuje. Prošel
+      <a href="/udemy_dan/" class="text-zinc-300 hover:text-white duration-200"
+        >vyhlášeným kurzem od Jonase Schmedtmanna
+      </a>
+      a drží
+      <a href="/dofe_dan/" class="text-zinc-300 hover:text-white duration-200">
+        mezinárodní bronzovou cenu DofE.
+      </a>
+    </TeamMember>
 
-      <img
-        src="/assets/dan.jpg"
-        alt="Daniel Ransdorf"
-        class="rounded-full sm:h-72 sm:w-72 h-48 w-48 aspect-square"
-      />
-    </div>
+    <TeamMember name="Vašek" image="/assets/dan.jpg">
+      Studuje Gymnázium v Lounech. O programování se zajímá 3 roky. Mimo to se
+      zabívá sportovní střelbou, 3D tiskem a technologiemi celkově.
+    </TeamMember>
   </div>
 </section>
-<script>
-  import VanillaTilt from "vanilla-tilt";
-  VanillaTilt.init(document.querySelector("#tom"), {
-    max: 4,
-    speed: 500,
-    reverse: true,
-  });
-  VanillaTilt.init(document.querySelector("#dan"), {
-    max: 8,
-    speed: 500,
-    reverse: true,
-  });
-</script>
-
-<style>
-  .member {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 16px;
-  }
-</style>
-<style>
-
-   .member {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding-left:3.33vw;
-    padding-right:3.33vw;
-    padding-top:2.08vw;
-    padding-bottom:2.08vw;
-  } 
-  @media (min-width:1280px){
-    .name{
-    font-size:1.9vw;
-    margin-bottom:0.8vw;
-  }
-  .paragraph{
-font-size: .85vw;
-  }img{
-    width: 15vw;
-    height: 15vw;
-  }
-  }
-  
-  
-  
-  @media (min-width:1921px){
-    .paragraph{
-font-size: 16px;
-  }
-  }
-
-
-
-</style>

@@ -1,0 +1,78 @@
+---
+interface Props {
+  name: string;
+  image: string;
+}
+
+const { name, image } = Astro.props;
+---
+
+<div
+  data-tilt
+  data-tilt-max="1"
+  data-tilt-perspective="600"
+  data-tilt-speed="3800"
+  class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
+          backdrop-blur-md bg-opacity-10 
+          p-8 xl:px-12 member grid place-items-center h-full justify-between items-center xl:flex flex-col member"
+>
+  <img src={image} alt={name} class="rounded-full sm:h-32 sm:w-32 aspect-square"
+  />
+  <div class="mb-4">
+    <h3 class="text-4xl font-display text-white text-center">
+      {name}
+    </h3>
+    <p class="text-zinc-100 paragraph">
+      <slot></slot>
+    </p>
+  </div>
+</div>
+
+<script>
+  import VanillaTilt from "vanilla-tilt";
+  VanillaTilt.init(document.querySelector(".member"), {
+    max: 12,
+    speed: 500,
+    reverse: true,
+  });
+</script>
+
+<style>
+  .member {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+  }
+
+  .member {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding-left: 3.33vw;
+    padding-right: 3.33vw;
+    padding-top: 2.08vw;
+    padding-bottom: 2.08vw;
+  }
+
+  @media (min-width: 1280px) {
+    .name {
+      font-size: 1.9vw;
+      margin-bottom: 0.8vw;
+    }
+    .paragraph {
+      font-size: 0.85vw;
+    }
+    img {
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+
+  @media (min-width: 1921px) {
+    .paragraph {
+      font-size: 16px;
+    }
+  }
+</style>
