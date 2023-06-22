@@ -14,12 +14,12 @@ const { name, image } = Astro.props;
   data-tilt-speed="3800"
   class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter
           backdrop-blur-md bg-opacity-10 
-          p-8 xl:px-12 member grid place-items-center h-full justify-between items-center xl:flex flex-col member"
+          p-8 xl:px-12 member grid place-items-center h-full gap-2 items-center xl:flex flex-col member"
 >
   <img src={image} alt={name} class="rounded-full sm:h-32 sm:w-32 aspect-square"
   />
   <div class="mb-4">
-    <h3 class="text-4xl font-display text-white text-center">
+    <h3 class="text-4xl font-display text-white text-center mb-4">
       {name}
     </h3>
     <p class="text-zinc-100 paragraph">
